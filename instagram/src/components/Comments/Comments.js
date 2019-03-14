@@ -7,6 +7,7 @@ const Comments = props => (
     {props.comments.map(c => (
       <Comment comment={c} key={c.text} />
     ))}
+    <input placeholder="Add comment" />
   </div>
 );
 
