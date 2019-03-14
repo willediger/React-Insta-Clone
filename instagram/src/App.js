@@ -6,6 +6,9 @@ import Posts from './components/Posts/Posts'
 
 import dummyData from './dummy-data'
 
+// go here for guide on how to utilize reactstrap
+// https://github.com/reactstrap/reactstrap
+
 class App extends Component {
   constructor() {
     super();
@@ -17,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <Posts />
+        <Posts posts={this.state.posts} />
       </div>
     );
   }

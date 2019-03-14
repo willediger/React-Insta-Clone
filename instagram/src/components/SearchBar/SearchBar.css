@@ -1,6 +1,23 @@
 .searchBar {
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  height: 77px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 1010px;
+  width: 100%;
+  padding: 26px 20px;
+  -webkit-transition: height .2s ease-in-out;
+  transition: height .2s ease-in-out;
+  flex-shrink: 0;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .logo {
@@ -27,6 +44,39 @@
 }
 
 .searchBox {
+  
+  height: 28px;
+  
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  min-width: 125px;
+  width: 215px;
+
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border: 0 solid #000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
   background: #fafafa;
   border: solid 1px #dbdbdb;
   -webkit-box-pack: center;

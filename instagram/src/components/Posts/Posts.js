@@ -4,11 +4,11 @@ import './Posts.css';
 import Post from './Post';
 
 const Posts = props => (
-  <>
-    <Post />
-    <Post />
-    <Post />
-  </>
+  <div className="posts">
+    {props.posts.map(p => (
+      <Post post={p} />
+    ))}
+  </div>
 );
 
 export default Posts;

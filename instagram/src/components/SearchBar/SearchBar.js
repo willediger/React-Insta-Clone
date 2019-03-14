@@ -7,7 +7,7 @@ const SearchBar = props => (
     <div className="logo"></div>
     <div className="divider"></div>
     <div className="companyName"></div>
-    <input className="searchBox" />
+    <input className="searchBox" placeholder="Search" />
     <div className="exploreBtn"></div>
     <div className="activityBtn"></div>
     <div className="profileBtn"></div>

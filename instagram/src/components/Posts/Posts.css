@@ -1,0 +1,20 @@
+.posts {
+  max-width: 935px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  height: 30px;
+}
+
+.username {
+  font-weight: bold;
+}
