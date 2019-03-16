@@ -12,15 +12,22 @@ import dummyData from './dummy-data'
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      posts: dummyData
-    }
+    this.state = {}
   }
+
+  componentDidMount = () => {
+    this.setState({posts: dummyData})
+  }
+
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <Posts posts={this.state.posts} />
+        {
+          this.state.posts !== undefined ? (
+            <Posts posts={this.state.posts} />
+          ) : ("Loading")
+        }
       </div>
     );
   }
