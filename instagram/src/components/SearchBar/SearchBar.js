@@ -4,13 +4,21 @@ import './SearchBar.css';
 
 const SearchBar = props => (
   <div className="searchBar">
-    <div className="logo"></div>
-    <div className="divider"></div>
-    <div className="companyName"></div>
-    <input className="searchBox" placeholder="Search" />
-    <div className="exploreBtn"></div>
-    <div className="activityBtn"></div>
-    <div className="profileBtn"></div>
+    <div className="searchBarContent">
+      <div className="logoSection">
+        <div className="logo"></div>
+        <div className="divider"></div>
+        <div className="companyName"></div>
+      </div>
+      <div className="searchBox">
+        <input className="searchInput" placeholder="Search" />
+      </div>
+      <div className="menu">
+        <div className="exploreBtn"></div>
+        <div className="activityBtn"></div>
+        <div className="profileBtn"></div>
+      </div>
+    </div>
   </div>
 );
 

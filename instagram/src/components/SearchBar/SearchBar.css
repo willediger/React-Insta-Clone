@@ -1,16 +1,25 @@
 .searchBar {
+  width: 100%;
+  height: 77px;
+  border: 1px solid #E6E6E6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+
+.searchBarContent {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 77px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  max-width: 1010px;
+  max-width: 970px;
   width: 100%;
   padding: 26px 20px;
   -webkit-transition: height .2s ease-in-out;
@@ -18,6 +27,15 @@
   flex-shrink: 0;
   margin: 0 auto;
   padding: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoSection {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -41,56 +59,20 @@
   height: 29px;
   width: 103px;
   background-image: url('./img/02f3a40c9710.png');
+  margin-top: 7px;
 }
 
 .searchBox {
-  
-  height: 28px;
-  
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  min-width: 125px;
-  width: 215px;
+  margin-right: 28px;
+}
 
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  border: 0 solid #000;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin: 0;
-  padding: 0;
-  position: relative;
+.searchInput {
+  animation-delay:0s;animation-direction:normal;animation-duration:0s;animation-fill-mode:none;animation-iteration-count:1;animation-name:none;animation-play-state:running;animation-timing-function:ease;background-attachment:scroll;background-blend-mode:normal;background-clip:border-box;background-color:rgb(255, 255, 255);background-image:none;background-origin:padding-box;background-position:0% 0%;background-repeat:repeat;background-size:auto;border-bottom-color:rgb(219, 219, 219);border-bottom-left-radius:3px;border-bottom-right-radius:3px;border-bottom-style:solid;border-bottom-width:1px;border-collapse:separate;border-image-outset:0px;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;border-left-color:rgb(219, 219, 219);border-left-style:solid;border-left-width:1px;border-right-color:rgb(219, 219, 219);border-right-style:solid;border-right-width:1px;border-top-color:rgb(219, 219, 219);border-top-left-radius:3px;border-top-right-radius:3px;border-top-style:solid;border-top-width:1px;bottom:auto;box-shadow:none;box-sizing:border-box;break-after:auto;break-before:auto;break-inside:auto;caption-side:top;clear:none;clip:auto;color:rgb(38, 38, 38);content:normal;cursor:text;direction:ltr;display:block;empty-cells:show;float:none;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;font-kerning:auto;font-size:16px;font-stretch:100%;font-style:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-weight:400;height:28px;image-rendering:auto;isolation:auto;justify-items:normal;justify-self:auto;left:auto;letter-spacing:normal;line-height:18px;list-style-image:none;list-style-position:outside;list-style-type:disc;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;max-height:none;max-width:none;min-height:auto;min-width:auto;mix-blend-mode:normal;object-fit:fill;object-position:50% 50%;offset-distance:0px;offset-path:none;offset-rotate:auto 0deg;opacity:1;orphans:2;outline-color:rgb(38, 38, 38);outline-offset:0px;outline-style:none;outline-width:0px;overflow-anchor:auto;overflow-wrap:normal;overflow-x:visible;overflow-y:visible;padding-bottom:3px;padding-left:6px;padding-right:10px;padding-top:3px;pointer-events:auto;position:static;resize:none;right:auto;scroll-behavior:auto;speak:normal;table-layout:auto;tab-size:8;text-align:start;text-align-last:auto;text-decoration:none solid rgb(38, 38, 38);text-decoration-line:none;text-decoration-style:solid;text-decoration-color:rgb(38, 38, 38);text-decoration-skip-ink:auto;text-underline-position:auto;text-indent:0px;text-rendering:auto;text-shadow:none;text-size-adjust:100%;text-overflow:clip;text-transform:none;top:auto;touch-action:auto;transition-delay:0s;transition-duration:0s;transition-property:all;transition-timing-function:ease;unicode-bidi:normal;vertical-align:baseline;visibility:visible;white-space:normal;widows:2;width:215px;will-change:auto;word-break:normal;word-spacing:0px;z-index:2;zoom:1;-webkit-appearance:none;backface-visibility:visible;-webkit-border-horizontal-spacing:0px;-webkit-border-image:none;-webkit-border-vertical-spacing:0px;-webkit-box-align:stretch;-webkit-box-decoration-break:slice;-webkit-box-direction:normal;-webkit-box-flex:0;-webkit-box-ordinal-group:1;-webkit-box-orient:horizontal;-webkit-box-pack:start;-webkit-box-reflect:none;column-count:auto;column-gap:normal;column-rule-color:rgb(38, 38, 38);column-rule-style:none;column-rule-width:0px;column-span:none;column-width:auto;align-content:normal;align-items:normal;align-self:auto;flex-basis:auto;flex-grow:0;flex-shrink:1;flex-direction:row;flex-wrap:nowrap;justify-content:normal;-webkit-font-smoothing:auto;grid-auto-columns:auto;grid-auto-flow:row;grid-auto-rows:auto;grid-column-end:auto;grid-column-start:auto;grid-template-areas:none;grid-template-columns:none;grid-template-rows:none;grid-row-end:auto;grid-row-start:auto;row-gap:normal;-webkit-highlight:none;hyphens:manual;-webkit-hyphenate-character:auto;-webkit-line-break:auto;-webkit-line-clamp:none;-webkit-locale:"en";-webkit-margin-before-collapse:collapse;-webkit-margin-after-collapse:collapse;-webkit-mask-box-image:none;-webkit-mask-box-image-outset:0px;-webkit-mask-box-image-repeat:stretch;-webkit-mask-box-image-slice:0 fill;-webkit-mask-box-image-source:none;-webkit-mask-box-image-width:auto;-webkit-mask-clip:border-box;-webkit-mask-composite:source-over;-webkit-mask-image:none;-webkit-mask-origin:border-box;-webkit-mask-position:0% 0%;-webkit-mask-repeat:repeat;-webkit-mask-size:auto;order:0;perspective:none;perspective-origin:107.5px 14px;-webkit-print-color-adjust:economy;-webkit-rtl-ordering:logical;shape-outside:none;shape-image-threshold:0;shape-margin:0px;-webkit-tap-highlight-color:rgba(0, 0, 0, 0.18);-webkit-text-combine:none;-webkit-text-decorations-in-effect:none;-webkit-text-emphasis-color:rgb(38, 38, 38);-webkit-text-emphasis-position:over right;-webkit-text-emphasis-style:none;-webkit-text-fill-color:rgb(38, 38, 38);-webkit-text-orientation:vertical-right;-webkit-text-security:none;-webkit-text-stroke-color:rgb(38, 38, 38);-webkit-text-stroke-width:0px;transform:none;transform-origin:107.5px 14px;transform-style:flat;-webkit-user-drag:auto;-webkit-user-modify:read-only;user-select:auto;-webkit-writing-mode:horizontal-tb;-webkit-app-region:none;buffered-rendering:auto;clip-path:none;clip-rule:nonzero;mask:none;filter:none;flood-color:rgb(0, 0, 0);flood-opacity:1;lighting-color:rgb(255, 255, 255);stop-color:rgb(0, 0, 0);stop-opacity:1;color-interpolation:srgb;color-interpolation-filters:linearrgb;color-rendering:auto;fill:rgb(0, 0, 0);fill-opacity:1;fill-rule:nonzero;marker-end:none;marker-mid:none;marker-start:none;mask-type:luminance;shape-rendering:auto;stroke:none;stroke-dasharray:none;stroke-dashoffset:0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-width:1px;alignment-baseline:auto;baseline-shift:0px;dominant-baseline:auto;text-anchor:start;writing-mode:horizontal-tb;vector-effect:none;paint-order:normal;d:none;cx:0px;cy:0px;x:0px;y:0px;r:0px;rx:auto;ry:auto;caret-color:rgb(38, 38, 38);line-break:auto;
+  background-color: #FAFAFA;
+}
 
-  background: #fafafa;
-  border: solid 1px #dbdbdb;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  
-  border-radius: 3px;
-  color: #999;
-  cursor: text;
-  font-size: 14px;
-  font-weight: 300;
-  padding: 7px;
-  text-align: center;
+.searchInput::placeholder {
+  color: #999999;
 }
 
 .exploreBtn {
@@ -107,6 +89,7 @@
   height: 24px;
   width: 24px;
   background-image: url('./img/02f3a40c9710.png');
+  margin-left:30px;
 }
 
 .profileBtn {
@@ -115,4 +98,10 @@
   height: 24px;
   width: 24px;
   background-image: url('./img/02f3a40c9710.png');
+  margin-left:30px;
+}
+
+.logoSection, .menu {
+  display: flex;
+  flex-direction: row;
 }
