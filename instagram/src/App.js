@@ -24,9 +24,9 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         {
-          this.state.posts !== undefined ? (
-            <Posts posts={this.state.posts} />
-          ) : ("Loading")
+          this.state.posts !== undefined ? 
+            <Posts posts={this.state.posts} /> :
+            "Loading"
         }
       </div>
     );
