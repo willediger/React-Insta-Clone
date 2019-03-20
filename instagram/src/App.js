@@ -23,11 +23,14 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        {
-          this.state.posts !== undefined ? 
-            <Posts posts={this.state.posts} /> :
-            "Loading"
-        }
+        <main>
+          {
+            this.state.posts !== undefined ? 
+              <Posts posts={this.state.posts} /> :
+              "Loading"
+          }
+          <div className="sidebar"></div>
+        </main>
       </div>
     );
   }

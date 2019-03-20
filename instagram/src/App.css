@@ -1,3 +1,15 @@
 .App {
   margin: 0 auto;
 }
+
+.App main {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 293px;
+  margin-left: 27px;
+}
