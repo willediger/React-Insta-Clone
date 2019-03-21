@@ -52,7 +52,7 @@ class SearchBar extends React.Component {
           <div className="menu">
             <div className="exploreBtn"></div>
             <div className="activityBtn"></div>
-            <div className="profileBtn"></div>
+            <div className="profileBtn" onClick={this.props.logout}></div>
           </div>
         </div>
       </div>

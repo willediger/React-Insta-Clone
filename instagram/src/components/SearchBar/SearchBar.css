@@ -103,6 +103,7 @@
   width: 24px;
   background-image: url('../../img/02f3a40c9710.png');
   margin-left:30px;
+  cursor: pointer;
 }
 
 .logoSection, .menu {

@@ -3,11 +3,16 @@ import './App.css';
 
 import SearchBar from './components/SearchBar/SearchBar'
 import Posts from './components/Posts/Posts'
+import withAuthenticate from './authentication/withAuthenticate'
+import Login from './components/Login/Login'
 
 import dummyData from './dummy-data'
 
 // go here for guide on how to utilize reactstrap
 // https://github.com/reactstrap/reactstrap
+
+const ComponentFromWithAuthenticate = withAuthenticate(Posts)(Login)
+
 
 class App extends Component {
   constructor() {
@@ -94,11 +99,21 @@ class App extends Component {
     })
   }
 
+  login = (username, password) => {
+    if (password.length) {
+      this.setState({loggedInUser: username})
+    }
+  }
+
+  logout = () => {
+    this.setState({loggedInUser: ''})
+  }
+
   componentDidMount = () => {
     this.setState(
       {
         posts: dummyData,
-        loggedInUser: 'dummyUser'
+        loggedInUser: ''
       }, () => {
         this.setInitialMetaData();
       }
@@ -110,11 +125,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar search={this.searchPosters} clearSearch={this.clearSearchFilter} />
+        <SearchBar
+          search={this.searchPosters}
+          clearSearch={this.clearSearchFilter}
+          logout={this.logout}
+        />
         <main>
           {
             this.state.posts !== undefined ? 
-              <Posts posts={this.state.posts} addNewComment={this.addNewComment} loggedInUser={this.state.loggedInUser} togglePostLiked={this.togglePostLiked} /> :
+              <ComponentFromWithAuthenticate 
+                posts={this.state.posts}
+                addNewComment={this.addNewComment}
+                loggedInUser={this.state.loggedInUser}
+                togglePostLiked={this.togglePostLiked}
+                login={this.login}
+              /> :
               "Loading"
           }
           <div className="sidebar"></div>
