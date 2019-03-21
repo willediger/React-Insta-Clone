@@ -36,6 +36,7 @@ class Login extends React.Component {
           onChange={this.inputHandler} 
           value={this.state.password}
           type="password"
+          autoComplete="current-password"
         />
         <button type="submit" className="loginBtn">Log in</button>
       </form>

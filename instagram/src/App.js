@@ -17,7 +17,15 @@ const ComponentFromWithAuthenticate = withAuthenticate(Posts)(Login)
 class App extends Component {
   constructor() {
     super();
-    this.state = {}
+    this.state = this.grabLocalStorageInsta();
+  }
+
+  grabLocalStorageInsta = () => {
+    const localStorageInsta = localStorage.getItem('instagram')
+    if (localStorageInsta) {
+      return JSON.parse(localStorageInsta);
+    }
+    return {};
   }
 
   searchPosters = search => {
@@ -110,16 +118,23 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    this.setState(
-      {
-        posts: dummyData,
-        loggedInUser: ''
-      }, () => {
-        this.setInitialMetaData();
-      }
-      //testing whether adding a new comment works
-      // () => {this.addNewComment("a", "mic check 1 2 1 2", "dummy")}
-    );
+    if (!this.state) {
+      this.setState(
+        {
+          posts: dummyData,
+          loggedInUser: ''
+        }, () => {
+          this.setInitialMetaData();
+        }
+        //testing whether adding a new comment works
+        // () => {this.addNewComment("a", "mic check 1 2 1 2", "dummy")}
+      );
+    }
+
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    localStorage.instagram = JSON.stringify(this.state);
   }
 
   render() {
