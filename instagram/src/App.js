@@ -130,7 +130,6 @@ class App extends Component {
         // () => {this.addNewComment("a", "mic check 1 2 1 2", "dummy")}
       );
     }
-
   }
 
   componentDidUpdate = (prevProps, prevState) => {
