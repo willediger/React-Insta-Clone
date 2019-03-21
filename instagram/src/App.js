@@ -118,7 +118,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    if (!this.state) {
+    if (!this.state.posts) {
       this.setState(
         {
           posts: dummyData,
