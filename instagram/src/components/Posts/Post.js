@@ -34,12 +34,12 @@ class Post extends React.Component {
           <SocialButtons />
           <p className="likesCount">{p.likes} likes</p>
           <Comments comments={p.comments} />
-          <p className="postAge">{moment(p.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</p>
+          <p className="postAge">{moment(p.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
           <form onSubmit={this.addComment} className="addComment">
-            <input 
+            <textarea 
               name="addComment"
               value={this.state.commentToAdd}
-              placeholder="Add Comment" 
+              placeholder="Add a comment..." 
               onChange={this.inputChangeHandler}
             />
           </form>

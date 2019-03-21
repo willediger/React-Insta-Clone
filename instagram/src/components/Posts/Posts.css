@@ -1,20 +1,125 @@
 .posts {
-  max-width: 935px;
-  width: 100%;
-  margin: 0 auto;
+  max-width: 616px;
+  margin-top: -2px;
+  margin-bottom: 61px;
+}
+
+.post {
+  margin-top: 61px;
+  border: 1px solid #E6E6E6;
+}
+
+.post img {
+  max-width: 100%;
 }
 
 .post-header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-bottom: 1px solid #EFEFEF;
+  height: 61px;
+  padding-left: 17px;
+  background-color: white;
 }
 
 .thumbnail {
   border-radius: 50%;
   height: 30px;
+  margin-right: 13px;
 }
 
 .username {
   font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.postMetaData {
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-right: 16px;
+}
+
+.likesCount {
+  margin-top: 9px;
+  font-weight: bold;
+}
+
+.likeBtn, .commentBtn {
+  background: none;
+  border: none;
+}
+
+.likeBtn {
+  background-position: -130px -158px;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/02f3a40c9710.png');
+}
+
+.likedBtn {
+  background-repeat: no-repeat;
+  background-position: -104px -158px;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/02f3a40c9710.png');
+}
+
+.commentBtn {
+  background-repeat: no-repeat;
+  background-position: -84px -74px;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/02f3a40c9710.png');
+  margin-left: 16px;
+}
+
+.postAge {
+  font-size: 1rem;
+  color: #999;
+  padding-top: 11px;
+  padding-bottom: 12px;
+}
+
+.addComment {
+  border-top: 1px solid #efefef;
+  padding-top: 19px;
+  padding-bottom: 18px;
+}
+
+.addComment textarea {
+  background: 0 0;
+  border: 0;
+  color: #262626;
+  font-size: inherit;
+  height: 18px;
+  max-height: 80px;
+  outline: 0;
+  padding: 0;
+  resize: none;
+  height: 18px;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  width: 100%;
+  -webkit-rtl-ordering: logical;
+  flex-direction: column;
+  -webkit-appearance: textarea;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  margin: 0em;
 }

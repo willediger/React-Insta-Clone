@@ -49,12 +49,17 @@ border-spacing: 0;
 
 /* END CSS RESET */
 
+html {
+  font-size: 62.5%;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 1.4rem;
 }
 
 body {
