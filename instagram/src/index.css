@@ -65,3 +65,7 @@ body {
 body {
   background-color: #FAFAFA;
 }
+
+button:focus {
+  outline:0;
+}
