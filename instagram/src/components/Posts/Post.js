@@ -25,8 +25,10 @@ class Post extends React.Component {
 
   render() {
     const p = this.props.post;
+    const postClasses = ['post']
+    if (p.filtered) {postClasses.push('filtered')}
     return (
-      <div className="post">
+      <div className={postClasses.join(' ')}>
         <div className="post-header">
           <img src={p.thumbnailUrl} alt={p.timestamp} className="thumbnail" />
           <p className="username">{p.username}</p>

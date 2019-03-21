@@ -15,6 +15,41 @@ class App extends Component {
     this.state = {}
   }
 
+  searchPosters = search => {
+    console.log(search)
+    this.setState(prevState => {
+      return {
+        posts: prevState.posts.map(el => {
+          if (!el.username.includes(search)) {
+            return {
+              ...el,
+              filtered: true
+            }
+          } else {
+            return {
+              ...el,
+              filtered: false
+            }
+          }
+        })
+      }
+    });
+  }
+
+  clearSearchFilter = () => {
+    this.setState(prevState => {
+      return {
+        posts: prevState.posts.map(el => {
+          return {
+            ...el,
+            filtered: false
+          }
+        })
+      }
+    });
+  }
+
+
   nextCommentId = posts => {
     // from posts, grabs each comments array, then grabs only id's of comments, then flattens array, then grabs max of id's
     const nextId = Math.max(...posts.map(p => p.comments.map(c => Number.parseInt(c.id))).flat()) + 1;
@@ -50,10 +85,11 @@ class App extends Component {
     })
   }
 
-  setInitialLikes = () => {
+  setInitialMetaData = () => {
     this.setState(prevState => {
       let newPosts = prevState.posts;
       newPosts.forEach(p => p.liked = false)
+      newPosts.forEach(p => p.filtered = false)
       return {posts: newPosts}
     })
   }
@@ -64,7 +100,7 @@ class App extends Component {
         posts: dummyData,
         loggedInUser: 'dummyUser'
       }, () => {
-        this.setInitialLikes();
+        this.setInitialMetaData();
       }
       //testing whether adding a new comment works
       // () => {this.addNewComment("a", "mic check 1 2 1 2", "dummy")}
@@ -74,7 +110,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar search={this.searchPosters} clearSearch={this.clearSearchFilter} />
         <main>
           {
             this.state.posts !== undefined ? 
