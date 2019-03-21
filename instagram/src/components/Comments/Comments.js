@@ -6,13 +6,14 @@ class Comments extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      comments: this.props.comments
     }
   }
+
   render() {
     return (
       <div className="comments">
-        {this.props.comments.map(c => (
+        {this.state.comments.map(c => (
           <Comment comment={c} key={c.text} />
         ))}
       </div>
