@@ -33,7 +33,7 @@ class Post extends React.Component {
         </div>
         <img src={p.imageUrl} alt={p.timestamp} className="post-img" />
         <div className="postMetaData">
-          <SocialButtons />
+          <SocialButtons liked={p.liked} postId={p.id} togglePostLiked={this.props.togglePostLiked} />
           <p className="likesCount">{p.likes} likes</p>
           <Comments comments={p.comments} />
           <p className="postAge">{moment(p.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>

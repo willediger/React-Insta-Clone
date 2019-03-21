@@ -33,12 +33,39 @@ class App extends Component {
     })
   }
 
+  togglePostLiked = postId => event => {
+    event.preventDefault();
+    this.setState(prevState => {
+      let newPosts = prevState.posts;
+      const postIdx = newPosts.findIndex(p => p.id === postId);
+      newPosts[postIdx].liked = !newPosts[postIdx].liked;
+      if (newPosts[postIdx].liked) {
+        newPosts[postIdx].likes++
+      } else {
+        newPosts[postIdx].likes--
+      }
+      return {
+        posts: newPosts
+      }
+    })
+  }
+
+  setInitialLikes = () => {
+    this.setState(prevState => {
+      let newPosts = prevState.posts;
+      newPosts.forEach(p => p.liked = false)
+      return {posts: newPosts}
+    })
+  }
+
   componentDidMount = () => {
     this.setState(
       {
         posts: dummyData,
         loggedInUser: 'dummyUser'
-      }, 
+      }, () => {
+        this.setInitialLikes();
+      }
       //testing whether adding a new comment works
       // () => {this.addNewComment("a", "mic check 1 2 1 2", "dummy")}
     );
@@ -51,7 +78,7 @@ class App extends Component {
         <main>
           {
             this.state.posts !== undefined ? 
-              <Posts posts={this.state.posts} addNewComment={this.addNewComment} loggedInUser={this.state.loggedInUser} /> :
+              <Posts posts={this.state.posts} addNewComment={this.addNewComment} loggedInUser={this.state.loggedInUser} togglePostLiked={this.togglePostLiked} /> :
               "Loading"
           }
           <div className="sidebar"></div>
