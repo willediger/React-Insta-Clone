@@ -19,7 +19,6 @@ class Post extends React.Component {
 
   addNewComment = (postId, loggedInUser) => event => {
     event.preventDefault();
-    console.log(postId, loggedInUser);
     this.props.addNewComment(postId, this.state.commentToAdd, loggedInUser);
     this.setState({commentToAdd: ''});
   }
