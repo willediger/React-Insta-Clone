@@ -8,7 +8,7 @@ import Post from './Post';
 const Posts = props => (
   <div className="posts">
     {props.posts.map(p => (
-      <Post post={p} key={p.username} />
+      <Post post={p} key={p.username} addNewComment={props.addNewComment} loggedInUser={props.loggedInUser} />
     ))}
   </div>
 );

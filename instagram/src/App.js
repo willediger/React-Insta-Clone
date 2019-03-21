@@ -35,7 +35,10 @@ class App extends Component {
 
   componentDidMount = () => {
     this.setState(
-      {posts: dummyData}, 
+      {
+        posts: dummyData,
+        loggedInUser: 'dummyUser'
+      }, 
       //testing whether adding a new comment works
       // () => {this.addNewComment("a", "mic check 1 2 1 2", "dummy")}
     );
@@ -48,7 +51,7 @@ class App extends Component {
         <main>
           {
             this.state.posts !== undefined ? 
-              <Posts posts={this.state.posts} /> :
+              <Posts posts={this.state.posts} addNewComment={this.addNewComment} loggedInUser={this.state.loggedInUser} /> :
               "Loading"
           }
           <div className="sidebar"></div>

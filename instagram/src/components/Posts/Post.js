@@ -17,8 +17,11 @@ class Post extends React.Component {
     this.setState({commentToAdd: e.target.value})
   }
 
-  addComment = e => {
-
+  addNewComment = (postId, loggedInUser) => event => {
+    event.preventDefault();
+    console.log(postId, loggedInUser);
+    this.props.addNewComment(postId, this.state.commentToAdd, loggedInUser);
+    this.setState({commentToAdd: ''});
   }
 
   render() {
@@ -35,8 +38,8 @@ class Post extends React.Component {
           <p className="likesCount">{p.likes} likes</p>
           <Comments comments={p.comments} />
           <p className="postAge">{moment(p.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
-          <form onSubmit={this.addComment} className="addComment">
-            <textarea 
+          <form onSubmit={this.addNewComment(p.id, this.props.loggedInUser)} className="addComment">
+            <input 
               name="addComment"
               value={this.state.commentToAdd}
               placeholder="Add a comment..." 
