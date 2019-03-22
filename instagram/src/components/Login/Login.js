@@ -20,10 +20,11 @@ class Login extends React.Component {
   }
 
   render() {
+    let loginDisabled = !(this.state.username && this.state.password)
     return (
       <div className="login">
         <div className="logo"></div>
-        <form onSubmit={this.login}>
+        <form onSubmit={this.login} autocomplete="off">
           <input 
             className="usernameInput"
             placeholder="username"
@@ -40,7 +41,7 @@ class Login extends React.Component {
             type="password"
             autoComplete="current-password"
           />
-          <button type="submit" className="loginBtn">Log in</button>
+          <button type="submit" className='loginBtn' disabled={loginDisabled}>Log in</button>
         </form>
       </div>
     );

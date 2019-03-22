@@ -64,3 +64,8 @@
   white-space: nowrap;
   width: auto;
 }
+
+.loginBtn:disabled, .loginBtn[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}
