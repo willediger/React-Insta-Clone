@@ -3,7 +3,7 @@ import './SearchBar.css';
 
 import styled, { css } from "styled-components";
 
-const SearchBarContainer = styled.div`
+const SearchBarHeader = styled.header`
   width: 100%;
   height: 77px;
   border: 1px solid #E6E6E6;
@@ -102,7 +102,7 @@ class SearchBar extends React.Component {
   render() {
     const noSearchEntered = !this.state.search.length;
     return (
-      <SearchBarContainer>
+      <SearchBarHeader>
         <SearchBarContents>
           <LogoSection>
             <div className="logo"></div>
@@ -124,7 +124,7 @@ class SearchBar extends React.Component {
             <div className="profileBtn" onClick={this.props.logout}></div>
           </MenuIcons>
         </SearchBarContents>
-      </SearchBarContainer>
+      </SearchBarHeader>
     );
   } 
 }
