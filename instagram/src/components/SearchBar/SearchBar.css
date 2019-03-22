@@ -8,23 +8,12 @@
   background: white;
 }
 
-
 .searchBarContent {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   max-width: 970px;
   width: 100%;
   padding: 26px 20px;
-  -webkit-transition: height .2s ease-in-out;
-  transition: height .2s ease-in-out;
-  flex-shrink: 0;
   margin: 0 auto;
   padding: 0;
   justify-content: space-between;
@@ -72,14 +61,11 @@
 
 .searchInput {
   font-size: 16px;
-  -webkit-appearance: none;
   border: solid 1px #dbdbdb;
   border-radius: 3px;
   color: #262626;
   outline: 0;
   padding: 3px 10px 3px 10px;
-  z-index: 2;
-  box-sizing: border-box;
   height: 100%;
   width: 100%;
   background-color: #FAFAFA;
