@@ -39,7 +39,11 @@ class Post extends React.Component {
           <p className="likesCount">{p.likes} likes</p>
           <Comments comments={p.comments} />
           <p className="postAge">{moment(p.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
-          <form onSubmit={this.addNewComment(p.id, this.props.loggedInUser)} className="addComment">
+          <form 
+            onSubmit={this.addNewComment(p.id, this.props.loggedInUser)}
+            className="addComment"
+            autocomplete="off"
+          >
             <input 
               name="addComment"
               value={this.state.commentToAdd}
