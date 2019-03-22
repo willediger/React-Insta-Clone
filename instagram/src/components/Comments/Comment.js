@@ -1,15 +1,26 @@
 import React from 'react';
-import './Comments.css';
 
 import CommentUserName from '../Styles/Reuseable/CommentUserName'
 
+
+import styled from "styled-components";
+
+const CommentContainer = styled.div`
+  margin-top: 10px;
+  max-width: 582px;
+`
+
+const CommentText = styled.span`
+  margin-left: 7px;
+`
+
 const Comment = props => (
-  <div className="comment">
+  <CommentContainer>
     <p>
       <CommentUserName>{props.comment.username}</CommentUserName>
-      <span className="comment-text">{props.comment.text}</span>
+      <CommentText>{props.comment.text}</CommentText>
     </p>
-  </div>
+  </CommentContainer>
 );
 
 export default Comment;

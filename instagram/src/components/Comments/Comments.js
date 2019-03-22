@@ -1,6 +1,11 @@
 import React from 'react';
-import './Comments.css';
 import Comment from './Comment'
+
+import styled from "styled-components";
+
+const CommentsContainer = styled.div`
+  margin-top: 2px;
+`
 
 class Comments extends React.Component {
   constructor(props) {
@@ -12,11 +17,11 @@ class Comments extends React.Component {
 
   render() {
     return (
-      <div className="comments">
+      <CommentsContainer>
         {this.state.comments.map(c => (
           <Comment comment={c} key={c.text} />
         ))}
-      </div>
+      </CommentsContainer>
     );
   }
 } 
