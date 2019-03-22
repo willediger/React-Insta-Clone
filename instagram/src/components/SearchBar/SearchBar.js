@@ -27,9 +27,9 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    const clearSearchClasses = ['clearSearchBtn']
+    const searchBoxClasses = ['searchBox']
     if (!this.state.search.length) {
-      clearSearchClasses.push('noSearchEntered')
+      searchBoxClasses.push('noSearchEntered')
     }
     return (
       <div className="searchBar">
@@ -39,7 +39,7 @@ class SearchBar extends React.Component {
             <div className="divider"></div>
             <div className="companyName"></div>
           </div>
-          <div className="searchBox">
+          <div className={searchBoxClasses.join(' ')}>
             <input 
               className="searchInput"
               placeholder="Search"
@@ -47,7 +47,7 @@ class SearchBar extends React.Component {
               onChange={this.inputChangeHandler} 
               value={this.state.search}
             />
-            <button className={clearSearchClasses.join(' ')} onClick={this.clearSearch}></button>
+            <button className='clearSearchBtn' onClick={this.clearSearch}></button>
           </div>
           <div className="menu">
             <div className="exploreBtn"></div>
