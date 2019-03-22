@@ -2,8 +2,77 @@ import React from 'react';
 import './Posts.css';
 import moment from 'moment'
 
+import styled, { css } from "styled-components";
+
 import Comments from '../Comments/Comments';
 import SocialButtons from './SocialButtons'
+import UserName from '../Styles/Reuseable/UserName'
+
+const PostContainer = styled.div`
+  margin-top: 61px;
+  border: 1px solid #E6E6E6;
+  background-color: white;
+  ${props => 
+    props.filtered &&
+    css`
+      display: none;
+    `
+  }
+`
+
+const PostImg = styled.img`
+  max-width: 100%;
+`
+
+const PostHeader = styled.header`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #EFEFEF;
+  height: 61px;
+  padding-left: 17px;
+`
+
+const PosterThumbnail = styled.img`
+  border-radius: 50%;
+  height: 30px;
+  margin-right: 13px;
+`
+
+const PostMetaDataContainer = styled.div`
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-right: 16px;
+`
+
+const LikesCount = styled(UserName)`
+  margin-top: 9px;
+`
+
+const PostAge = styled.p`
+  font-size: 1rem;
+  color: #999;
+  padding-top: 11px;
+  padding-bottom: 12px;
+`
+
+const AddCommentForm = styled.form`
+  border-top: 1px solid #efefef;
+  padding-top: 19px;
+  padding-bottom: 18px;
+`
+
+const AddCommentFormInput = styled.input`
+  background: 0 0;
+  border: 0;
+  color: #262626;
+  height: 18px;
+  outline: 0;
+  padding: 0;
+  line-height: 18px;
+  width: 100%;
+  margin: 0;
+`
 
 class Post extends React.Component {
   constructor(props) {
@@ -25,34 +94,40 @@ class Post extends React.Component {
 
   render() {
     const p = this.props.post;
-    const postClasses = ['post']
-    if (p.filtered) {postClasses.push('filtered')}
     return (
-      <div className={postClasses.join(' ')}>
-        <div className="post-header">
-          <img src={p.thumbnailUrl} alt={p.timestamp} className="thumbnail" />
-          <p className="username">{p.username}</p>
-        </div>
-        <img src={p.imageUrl} alt={p.timestamp} className="post-img" />
-        <div className="postMetaData">
-          <SocialButtons liked={p.liked} postId={p.id} togglePostLiked={this.props.togglePostLiked} />
-          <p className="likesCount">{p.likes} likes</p>
+      <PostContainer filtered={p.filtered}>
+        <PostHeader>
+          <PosterThumbnail
+            src={p.thumbnailUrl}
+            alt={p.timestamp}
+          />
+          <UserName>{p.username}</UserName>
+        </PostHeader>
+        <PostImg src={p.imageUrl} alt={p.timestamp} />
+        <PostMetaDataContainer>
+          <SocialButtons
+            liked={p.liked}
+            postId={p.id}
+            togglePostLiked={this.props.togglePostLiked}
+          />
+          <LikesCount>{p.likes} likes</LikesCount>
           <Comments comments={p.comments} />
-          <p className="postAge">{moment(p.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}</p>
-          <form 
+          <PostAge>
+            {moment(p.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow().toUpperCase()}
+          </PostAge>
+          <AddCommentForm 
             onSubmit={this.addNewComment(p.id, this.props.loggedInUser)}
-            className="addComment"
             autocomplete="off"
           >
-            <input 
+            <AddCommentFormInput 
               name="addComment"
               value={this.state.commentToAdd}
               placeholder="Add a comment..." 
               onChange={this.inputChangeHandler}
             />
-          </form>
-        </div>
-      </div>
+          </AddCommentForm>
+        </PostMetaDataContainer>
+      </PostContainer>
     )
   }
 }

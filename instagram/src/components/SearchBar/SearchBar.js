@@ -116,7 +116,11 @@ class SearchBar extends React.Component {
               onChange={this.inputChangeHandler} 
               value={this.state.search}
             />
-            <ClearSearchBtn noSearchEntered={noSearchEntered} onClick={this.clearSearch} className='clearSearchBtn'></ClearSearchBtn>
+            <ClearSearchBtn
+              noSearchEntered={noSearchEntered}
+              onClick={this.clearSearch}
+              className='clearSearchBtn'
+            />
           </SearchBox>
           <MenuIcons>
             <div className="exploreBtn"></div>

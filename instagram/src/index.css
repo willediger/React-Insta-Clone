@@ -69,3 +69,8 @@ body {
 button:focus {
   outline:0;
 }
+
+button {
+  background: none;
+  border: none;
+}

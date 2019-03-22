@@ -1,16 +1,30 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
+import styled from "styled-components";
+
 import './Posts.css';
 
 import Post from './Post';
 
+const PostsContainer = styled.div`
+  max-width: 616px;
+  margin-top: -2px;
+  margin-bottom: 61px;
+`
+
 const Posts = props => (
-  <div className="posts">
+  <PostsContainer>
     {props.posts.map(p => (
-      <Post post={p} key={p.username} addNewComment={props.addNewComment} loggedInUser={props.loggedInUser} togglePostLiked={props.togglePostLiked} />
+      <Post 
+        post={p}
+        key={p.username}
+        addNewComment={props.addNewComment}
+        loggedInUser={props.loggedInUser}
+        togglePostLiked={props.togglePostLiked}
+      />
     ))}
-  </div>
+  </PostsContainer>
 );
 
 

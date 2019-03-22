@@ -6,8 +6,11 @@ const SocialButtons = props => {
   if (props.liked) {likeClasses.push('likedBtn')}
   return (
     <div className="socialButtons">
-      <button className={likeClasses.join(' ')} onClick={props.togglePostLiked(props.postId)} ></button>
-      <button className="commentBtn"></button>
+      <button
+        className={likeClasses.join(' ')}
+        onClick={props.togglePostLiked(props.postId)}
+      />
+      <button className="commentBtn" />
     </div>
   )
 }
