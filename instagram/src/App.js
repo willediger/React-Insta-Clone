@@ -156,7 +156,6 @@ class App extends Component {
               /> :
               "Loading"
           }
-          <div className="sidebar"></div>
         </main>
       </div>
     );
