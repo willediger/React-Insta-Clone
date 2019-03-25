@@ -1,0 +1,24 @@
+.likeBtn {
+  background-position: -130px -158px;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/02f3a40c9710.png');
+}
+
+.likedBtn {
+  background-repeat: no-repeat;
+  background-position: -104px -158px;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/02f3a40c9710.png');
+}
+
+.commentBtn {
+  background-repeat: no-repeat;
+  background-position: -84px -74px;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/02f3a40c9710.png');
+  margin-left: 16px;
+}

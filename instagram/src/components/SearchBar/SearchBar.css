@@ -1,0 +1,59 @@
+.logo {
+  background-repeat: no-repeat;
+  background-position: -110px -100px;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/02f3a40c9710.png');
+}
+
+.divider {
+  background-color: #262626;
+  height: 28px;
+  margin: 0 16px;
+  width: 1px;
+}
+
+.companyName {
+  background-repeat: no-repeat;
+  background-position: -136px 0;
+  height: 29px;
+  width: 103px;
+  background-image: url('../../img/02f3a40c9710.png');
+  margin-top: 7px;
+}
+
+.exploreBtn {
+  background-repeat: no-repeat;
+  background-position: -241px -52px;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/02f3a40c9710.png');
+}
+
+.activityBtn {
+  background-repeat: no-repeat;
+  background-position: -130px -158px;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/02f3a40c9710.png');
+  margin-left:30px;
+}
+
+.profileBtn {
+  background-position: 0 -158px;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  background-image: url('../../img/02f3a40c9710.png');
+  margin-left:30px;
+  cursor: pointer;
+}
+
+.clearSearchBtn {
+  all: unset;
+  background-position: -203px -399px;
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  background-image: url('../../img/f01fcb405c10.png');
+}
